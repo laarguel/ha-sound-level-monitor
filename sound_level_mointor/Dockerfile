@@ -1,5 +1,4 @@
-ARG BUILD_FROM
-FROM $BUILD_FROM
+FROM ghcr.io/home-assistant/amd64-base:3.19
 
 RUN apk add --no-cache ffmpeg python3 py3-pip \
     && pip3 install numpy paho-mqtt
