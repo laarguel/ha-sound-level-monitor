@@ -1,0 +1,35 @@
+{
+  "name": "Sound Level Monitor",
+  "version": "1.0",
+  "slug": "sound_level_monitor",
+  "description": "RTSP audio to dB via MQTT",
+  "startup": "services",
+  "boot": "auto",
+  "options": {
+    "cameras": [],
+    "sampling_seconds": 2,
+    "smoothing_window": 5,
+    "noise_threshold_db": 60,
+    "mqtt": {
+      "host": "core-mosquitto",
+      "username": "",
+      "password": ""
+    }
+  },
+  "schema": {
+    "cameras": [
+      {
+        "name": "str",
+        "rtsp": "str"
+      }
+    ],
+    "sampling_seconds": "int",
+    "smoothing_window": "int",
+    "noise_threshold_db": "int",
+    "mqtt": {
+      "host": "str",
+      "username": "str",
+      "password": "str"
+    }
+  }
+}
