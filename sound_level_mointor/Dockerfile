@@ -1,8 +1,10 @@
-FROM python:3.11-slim
+ARG BUILD_FROM
+FROM $BUILD_FROM
 
-RUN apt-get update && apt-get install -y ffmpeg && pip install numpy paho-mqtt
+RUN apk add --no-cache ffmpeg python3 py3-pip \
+    && pip3 install numpy paho-mqtt
 
 WORKDIR /app
 COPY run.py .
 
-CMD ["python", "run.py"]
+CMD ["python3", "run.py"]
