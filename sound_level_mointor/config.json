@@ -6,7 +6,6 @@
   "startup": "services",
   "boot": "auto",
   "arch": ["amd64", "aarch64", "armv7", "i386"],
-  "image": "local/sound_level_monitor",
   "options": {
     "cameras": [],
     "sampling_seconds": 2,
