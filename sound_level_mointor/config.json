@@ -5,7 +5,7 @@
   "description": "RTSP audio to dB via MQTT",
   "startup": "services",
   "boot": "auto",
-  "arch": ["amd64", "aarch64", "armv7", "i386"],
+  "arch": ["amd64"],
   "options": {
     "cameras": [],
     "sampling_seconds": 2,
